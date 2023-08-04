@@ -279,8 +279,22 @@ img{
     background: blue;
 }
 
-.qualidade-item:nth-of-type(3) h2::before{
-    
+.qualidade-item:nth-of-type(3n+1) h2::before{ /* 3n+1 pula 3 a partir do primeiro do tipo */
+    background: #ae81ff;
+}
+
+.qualidade-item:nth-of-type(3n+2) h2::before{
+    background: #f9265e;
+}
+
+.qualidade-item:nth-of-type(3n) h2::before{
+    background: #66d9eb;
+}
+
+.qualidade-item p{
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #7c7c7c;
 }
 
 @media (max-width:800px) {
