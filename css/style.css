@@ -201,7 +201,7 @@ img{
 .preco-item span{
     max-width: 300px;
     margin: 20px auto;
-    display: block; /* spam e inline, para definir margin eh preciso mudar para block*/
+    display: block; /* spam eh inline, para definir margin eh preciso mudar para block*/
     font-weight: bold;
     font-size: 3em;
     padding: 10px 0 5px 0;
@@ -250,6 +250,21 @@ img{
     font-size: 2.25em;
     padding: 15px 0;
     text-align: center;
+}
+
+@media (max-width:800px) {
+
+    .preco{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .preco .preco-item:nth-child(3){ /* referencio o 3o 'filho'*/
+        order: -2; /* para que apareca primeiro */
+    }
+    .preco .preco-item:nth-child(2){
+        order: -1; /* para que apareca em segundo */
+    }
+
 }
 
 .qualidade{
@@ -366,21 +381,6 @@ img{
     text-align: center;
     font-size: 2.25em;
     color: #122ab2;
-}
-
-@media (max-width:800px) {
-
-    .preco{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .preco .preco-item:nth-child(3){ /* referencio o 3o 'filho'*/
-        order: -2; /* para que apareca primeiro */
-    }
-    .preco .preco-item:nth-child(2){
-        order: -1; /* para que apareca em segundo */
-    }
-
 }
 
 @media (max-width: 570px){
